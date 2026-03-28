@@ -219,3 +219,6 @@ tests/
 | Golf Ghost: Scorecard table has 21 rows not 18 | OUT/IN/TOT summary rows included | Filter by `first_cell.isdigit()` to count only hole rows |
 | Metronome: Start/Stop button aria-label swaps | Running state shows `aria-label="Stop metronome"`, stopped shows `aria-label="Start metronome"` | Use separate locators for each state; use `expect().to_be_visible()` after state transitions |
 | Metronome: Theme test must be order-independent | Initial theme may be dark or light depending on prior localStorage | Read initial theme first, then assert it changed to the opposite after toggle |
+| Markdown Editor: `page.fill()` does not trigger preview or word count | App listens on `input` event but `fill()` bypasses native DOM events; preview is debounced (150ms) | Use `fill()` + `page.evaluate("updatePreview()")` — `updatePreview()` also calls `updateWordCount()` |
+| Markdown Editor: `Meta+B` (uppercase) fails for bold shortcut | JS checks `e.key === 'b'` (lowercase); Playwright `Meta+B` sends uppercase `B` | Use `Meta+b` (lowercase) in `locator.press()` for keyboard shortcuts |
+| Markdown Editor: `:has-text("B")` matches multiple toolbar buttons | "Soft Breaks" button also contains "B" in its text | Use `[data-action="bold"]` attribute selector instead |

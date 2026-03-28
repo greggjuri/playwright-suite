@@ -1,12 +1,14 @@
 # playwright-suite - Task Tracker
 
-## Current Sprint: Phase 2 — Full App Coverage
+## Current Sprint: Phase 3 — Multi-Browser + Robustness
 
 ### In Progress
 *Nothing currently in progress.*
 
 ### Up Next
-- [ ] `init-003-markdown-editor-tests.md` — Toolbar, keyboard shortcuts, live preview tests
+- [ ] Firefox and WebKit test matrix
+- [ ] Network interception tests for Golf Ghost Lambda API calls
+- [ ] Flakiness audit and fixes
 
 ---
 
@@ -18,6 +20,7 @@
 - [x] `pages/base_page.py` — BasePage POM class with shared navigation
 - [x] `init-001-golf-ghost-tests.md` — Golf Ghost POM + 14 passing tests (load, generation, scorecard, responsive)
 - [x] `init-002-metronome-tests.md` — Metronome POM + 19 passing tests (load, BPM, controls, theme, responsive)
+- [x] `init-003-markdown-editor-tests.md` — Markdown Editor POM + 22 passing tests (load, preview, word count, toolbar, keyboard, cheatsheet, theme, persistence, responsive)
 
 ---
 
@@ -32,7 +35,7 @@
 
 ### Phase 2 — Full App Coverage
 - [x] `init-002-metronome-tests.md` — Metronome test suite
-- [ ] `init-003-markdown-editor-tests.md` — Markdown Editor test suite
+- [x] `init-003-markdown-editor-tests.md` — Markdown Editor test suite
 - [x] Screenshot-on-failure wired into conftest.py
 - [x] pytest-html report confirmed working
 
@@ -60,6 +63,7 @@
 - [x] Phase 1 foundation: conftest.py, pytest.ini, base_page.py, pages/__init__.py, tests/__init__.py
 - [x] PRP-001: Golf Ghost test suite — `pages/golf_ghost_page.py` + `tests/test_golf_ghost.py` (14 tests)
 - [x] PRP-002: Metronome test suite — `pages/metronome_page.py` + `tests/test_metronome.py` (19 tests)
+- [x] PRP-003: Markdown Editor test suite — `pages/markdown_page.py` + `tests/test_markdown_editor.py` (22 tests)
 
 ---
 
@@ -82,4 +86,4 @@
 
 ---
 
-*Last updated: 2026-03-28 (PRP-002 Metronome complete — 33 total passing tests)*
+*Last updated: 2026-03-28 (PRP-003 Markdown Editor complete — Phase 2 done — 55 total passing tests)*
