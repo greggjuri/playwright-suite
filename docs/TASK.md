@@ -1,14 +1,15 @@
 # playwright-suite - Task Tracker
 
-## Current Sprint: Phase 3 — Multi-Browser + Robustness
+## Current Sprint: Phase 4 — CI/CD Integration
 
 ### In Progress
 *Nothing currently in progress.*
 
 ### Up Next
-- [ ] Firefox and WebKit test matrix
-- [ ] Network interception tests for Golf Ghost Lambda API calls
-- [ ] Flakiness audit and fixes
+- [ ] GitHub Actions workflow file
+- [ ] Actions pinned to commit hashes (not tags — security standard)
+- [ ] Scheduled nightly runs against production
+- [ ] README badge showing test status
 
 ---
 
@@ -21,6 +22,8 @@
 - [x] `init-001-golf-ghost-tests.md` — Golf Ghost POM + 14 passing tests (load, generation, scorecard, responsive)
 - [x] `init-002-metronome-tests.md` — Metronome POM + 19 passing tests (load, BPM, controls, theme, responsive)
 - [x] `init-003-markdown-editor-tests.md` — Markdown Editor POM + 22 passing tests (load, preview, word count, toolbar, keyboard, cheatsheet, theme, persistence, responsive)
+- [x] Phase 3: Multi-browser validation — 55 tests passing across Chromium, Firefox, and WebKit (165 total)
+- [x] Removed `--browser chromium` from `pytest.ini` addopts — browsers now specified explicitly on CLI
 
 ---
 
@@ -40,10 +43,10 @@
 - [x] pytest-html report confirmed working
 
 ### Phase 3 — Multi-Browser + Robustness
-- [ ] Firefox and WebKit test matrix
-- [ ] Network interception tests for Golf Ghost Lambda API calls
-- [ ] Responsive/viewport tests (Markdown Editor mobile layout)
-- [ ] Flakiness audit and fixes
+- [x] Firefox and WebKit test matrix — all 55 tests pass across all 3 browsers
+- [x] Responsive/viewport tests — included in each app's test suite (iPhone 14 390x844)
+- [x] Flakiness audit — zero flaky tests across full 3-browser run
+- [ ] Network interception tests for Golf Ghost Lambda API calls (deferred to future)
 
 ### Phase 4 — CI/CD Integration
 - [ ] GitHub Actions workflow file
@@ -64,6 +67,7 @@
 - [x] PRP-001: Golf Ghost test suite — `pages/golf_ghost_page.py` + `tests/test_golf_ghost.py` (14 tests)
 - [x] PRP-002: Metronome test suite — `pages/metronome_page.py` + `tests/test_metronome.py` (19 tests)
 - [x] PRP-003: Markdown Editor test suite — `pages/markdown_page.py` + `tests/test_markdown_editor.py` (22 tests)
+- [x] Phase 3: Multi-browser (Chromium + Firefox + WebKit) — 55 tests x 3 browsers, 0 failures
 
 ---
 
@@ -86,4 +90,4 @@
 
 ---
 
-*Last updated: 2026-03-28 (PRP-003 Markdown Editor complete — Phase 2 done — 55 total passing tests)*
+*Last updated: 2026-03-28 (Phase 3 complete — 55 tests passing across Chromium, Firefox, and WebKit)*
