@@ -116,9 +116,8 @@ class TestMarkdownToolbar:
         md = MarkdownPage(page)
         md.load()
         editor = page.locator(MarkdownPage.EDITOR)
-        editor.fill("")
         editor.fill("Hello")
-        md.select_all_editor()
+        editor.evaluate("el => el.select()")
         md.click_toolbar_bold()
         val = md.get_editor_value()
         assert val.strip() == "**Hello**", \
@@ -129,17 +128,16 @@ class TestMarkdownKeyboard:
     """Tests for keyboard shortcut interactions."""
 
     def test_bold_shortcut(self, page):
-        """Selecting text and pressing Cmd+B should wrap in **...**."""
+        """Selecting text and pressing Ctrl/Cmd+B should wrap in **...**."""
         md = MarkdownPage(page)
         md.load()
         editor = page.locator(MarkdownPage.EDITOR)
-        editor.fill("")
         editor.fill("World")
-        md.select_all_editor()
-        md.press_bold_shortcut()
+        editor.evaluate("el => el.select()")
+        editor.press("Control+b")
         val = md.get_editor_value()
         assert val.strip() == "**World**", \
-            f"Expected '**World**' after Cmd+B, got: {val}"
+            f"Expected '**World**' after Ctrl+B, got: {val}"
 
 
 class TestMarkdownCheatSheet:
