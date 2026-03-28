@@ -8,9 +8,9 @@ End-to-end test automation framework for [jurigregg.com](https://jurigregg.com) 
 
 | App | URL |
 |-----|-----|
-| Golf Blog | jurigregg.com |
+| Golf Ghost | ghost.jurigregg.com |
 | Metronome | metronome.jurigregg.com |
-| Sports Schedule | jurigregg.com/sports |
+| Markdown Editor | jurigregg.com/md/ |
 
 ## Tech Stack
 
