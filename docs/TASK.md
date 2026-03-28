@@ -1,15 +1,9 @@
 # playwright-suite - Task Tracker
 
-## Current Sprint: Phase 4 — CI/CD Integration
+## Current Sprint: Complete
 
-### In Progress
-*Nothing currently in progress.*
-
-### Up Next
-- [ ] GitHub Actions workflow file
-- [ ] Actions pinned to commit hashes (not tags — security standard)
-- [ ] Scheduled nightly runs against production
-- [ ] README badge showing test status
+### All Phases Done
+Project has reached its planned scope. See Future section for potential next steps.
 
 ---
 
@@ -24,6 +18,7 @@
 - [x] `init-003-markdown-editor-tests.md` — Markdown Editor POM + 22 passing tests (load, preview, word count, toolbar, keyboard, cheatsheet, theme, persistence, responsive)
 - [x] Phase 3: Multi-browser validation — 55 tests passing across Chromium, Firefox, and WebKit (165 total)
 - [x] Removed `--browser chromium` from `pytest.ini` addopts — browsers now specified explicitly on CLI
+- [x] Phase 4: GitHub Actions CI — workflow on push/weekly/manual, pinned action hashes, HTML report artifact, README badge
 
 ---
 
@@ -49,10 +44,10 @@
 - [ ] Network interception tests for Golf Ghost Lambda API calls (deferred to future)
 
 ### Phase 4 — CI/CD Integration
-- [ ] GitHub Actions workflow file
-- [ ] Actions pinned to commit hashes (not tags — security standard)
-- [ ] Scheduled nightly runs against production
-- [ ] README badge showing test status
+- [x] GitHub Actions workflow file (`.github/workflows/playwright.yml`)
+- [x] Actions pinned to commit hashes (checkout v4, setup-python v5, upload-artifact v4)
+- [x] Weekly scheduled runs (Monday 06:00 UTC) + push to main + manual dispatch
+- [x] README badge showing test status
 
 ### Future
 - [ ] Automation Platform tests (workflow list, public read-only state)
@@ -68,6 +63,7 @@
 - [x] PRP-002: Metronome test suite — `pages/metronome_page.py` + `tests/test_metronome.py` (19 tests)
 - [x] PRP-003: Markdown Editor test suite — `pages/markdown_page.py` + `tests/test_markdown_editor.py` (22 tests)
 - [x] Phase 3: Multi-browser (Chromium + Firefox + WebKit) — 55 tests x 3 browsers, 0 failures
+- [x] Phase 4: GitHub Actions CI — push/schedule/manual triggers, pinned hashes, artifact upload, README badge
 
 ---
 
@@ -90,4 +86,4 @@
 
 ---
 
-*Last updated: 2026-03-28 (Phase 3 complete — 55 tests passing across Chromium, Firefox, and WebKit)*
+*Last updated: 2026-03-28 (Phase 4 complete — all planned phases done)*

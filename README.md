@@ -1,5 +1,7 @@
 # playwright-suite
 
+![Playwright Tests](https://github.com/greggjuri/playwright-suite/actions/workflows/playwright.yml/badge.svg)
+
 End-to-end test automation framework for [jurigregg.com](https://jurigregg.com) AWS-hosted web properties. Built with Python Playwright + pytest using the Page Object Model pattern.
 
 ## Test Targets
