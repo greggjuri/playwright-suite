@@ -1,12 +1,11 @@
 # playwright-suite - Task Tracker
 
-## Current Sprint: Phase 1 — Foundation
+## Current Sprint: Phase 2 — Full App Coverage
 
 ### In Progress
 *Nothing currently in progress.*
 
 ### Up Next
-- [ ] `init-002-metronome-tests.md` — UI controls and JS rendering tests
 - [ ] `init-003-markdown-editor-tests.md` — Toolbar, keyboard shortcuts, live preview tests
 
 ---
@@ -18,23 +17,24 @@
 - [x] `pytest.ini` — configuration, markers, default Chromium
 - [x] `pages/base_page.py` — BasePage POM class with shared navigation
 - [x] `init-001-golf-ghost-tests.md` — Golf Ghost POM + 14 passing tests (load, generation, scorecard, responsive)
+- [x] `init-002-metronome-tests.md` — Metronome POM + 19 passing tests (load, BPM, controls, theme, responsive)
 
 ---
 
 ## Backlog
 
 ### Phase 1 — Foundation
-- [ ] `conftest.py` — browser fixtures, screenshot-on-failure, base setup
-- [ ] `pytest.ini` — configuration, markers, default browser option
-- [ ] `requirements.txt` — fully pinned via `pip freeze`
-- [ ] `pages/base_page.py` — BasePage POM class with shared navigation
-- [ ] `init-001-golf-ghost-tests.md` — Golf Ghost test suite (first real tests)
+- [x] `conftest.py` — browser fixtures, screenshot-on-failure, base setup
+- [x] `pytest.ini` — configuration, markers, default browser option
+- [x] `requirements.txt` — fully pinned via `pip freeze`
+- [x] `pages/base_page.py` — BasePage POM class with shared navigation
+- [x] `init-001-golf-ghost-tests.md` — Golf Ghost test suite (first real tests)
 
 ### Phase 2 — Full App Coverage
-- [ ] `init-002-metronome-tests.md` — Metronome test suite
+- [x] `init-002-metronome-tests.md` — Metronome test suite
 - [ ] `init-003-markdown-editor-tests.md` — Markdown Editor test suite
-- [ ] Screenshot-on-failure wired into conftest.py
-- [ ] pytest-html report confirmed working
+- [x] Screenshot-on-failure wired into conftest.py
+- [x] pytest-html report confirmed working
 
 ### Phase 3 — Multi-Browser + Robustness
 - [ ] Firefox and WebKit test matrix
@@ -59,6 +59,7 @@
 
 - [x] Phase 1 foundation: conftest.py, pytest.ini, base_page.py, pages/__init__.py, tests/__init__.py
 - [x] PRP-001: Golf Ghost test suite — `pages/golf_ghost_page.py` + `tests/test_golf_ghost.py` (14 tests)
+- [x] PRP-002: Metronome test suite — `pages/metronome_page.py` + `tests/test_metronome.py` (19 tests)
 
 ---
 
@@ -81,4 +82,4 @@
 
 ---
 
-*Last updated: 2026-03-27 (project kickoff)*
+*Last updated: 2026-03-28 (PRP-002 Metronome complete — 33 total passing tests)*

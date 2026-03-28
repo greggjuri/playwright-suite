@@ -217,3 +217,5 @@ tests/
 | Golf Ghost: Next.js SSR doesn't expose full DOM in page source | Client-side hydration renders form/scorecard elements | Always use Playwright to inspect rendered DOM, not raw HTML fetches |
 | Golf Ghost: Score colors use inline styles, not CSS classes | `style="color: rgb(34, 211, 238);"` not class names | Assert `td[style*='color']` presence, never specific color values |
 | Golf Ghost: Scorecard table has 21 rows not 18 | OUT/IN/TOT summary rows included | Filter by `first_cell.isdigit()` to count only hole rows |
+| Metronome: Start/Stop button aria-label swaps | Running state shows `aria-label="Stop metronome"`, stopped shows `aria-label="Start metronome"` | Use separate locators for each state; use `expect().to_be_visible()` after state transitions |
+| Metronome: Theme test must be order-independent | Initial theme may be dark or light depending on prior localStorage | Read initial theme first, then assert it changed to the opposite after toggle |
