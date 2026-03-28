@@ -115,11 +115,13 @@ class TestMarkdownToolbar:
         """Selecting text and clicking Bold should wrap in **...**."""
         md = MarkdownPage(page)
         md.load()
-        md.type_markdown("Hello")
+        editor = page.locator(MarkdownPage.EDITOR)
+        editor.fill("")
+        editor.fill("Hello")
         md.select_all_editor()
         md.click_toolbar_bold()
         val = md.get_editor_value()
-        assert "**Hello**" in val, \
+        assert val.strip() == "**Hello**", \
             f"Expected '**Hello**' after Bold button, got: {val}"
 
 
@@ -130,11 +132,13 @@ class TestMarkdownKeyboard:
         """Selecting text and pressing Cmd+B should wrap in **...**."""
         md = MarkdownPage(page)
         md.load()
-        md.type_markdown("World")
+        editor = page.locator(MarkdownPage.EDITOR)
+        editor.fill("")
+        editor.fill("World")
         md.select_all_editor()
         md.press_bold_shortcut()
         val = md.get_editor_value()
-        assert "**World**" in val, \
+        assert val.strip() == "**World**", \
             f"Expected '**World**' after Cmd+B, got: {val}"
 
 
